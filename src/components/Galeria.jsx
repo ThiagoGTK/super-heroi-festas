@@ -9,6 +9,7 @@ const FOTOS = [
   { id: 1, filename: "galeria-01.jpg", alt: "Super-herói ao lado de criança em evento, fazendo joinha", size: "normal" },
   { id: 2, filename: "galeria-02.jpg", alt: "Super-herói participando da festa e comemorando com bolo", size: "normal" },
   { id: 3, filename: "galeria-03.jpg", alt: "Dupla de super-heróis em apresentação de evento à noite", size: "normal" },
+  { id: 4, filename: "galeria-04.jpg", alt: "Super-herói posando com cosplayers em evento", size: "normal" },
 ];
 
 export default function Galeria() {

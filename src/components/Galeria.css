@@ -34,6 +34,15 @@
   grid-row: span 2;
 }
 
+/* Quando sobra 1 foto sozinha na última linha do grid de 3 colunas
+   (ex: 4, 7, 10... fotos), ela ocupa a largura toda em vez de ficar
+   isolada num canto. Só se aplica no layout desktop (ver media query). */
+@media (min-width: 901px) {
+  .galeria__item:last-child:nth-child(3n + 1):not(:first-child) {
+    grid-column: 1 / -1;
+  }
+}
+
 .galeria__item:hover,
 .galeria__item:focus-visible {
   transform: translateY(-6px);
