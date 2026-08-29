@@ -36,31 +36,20 @@ Alterando esse arquivo, o número de WhatsApp, o Instagram, o nome e a região
 são atualizados automaticamente em todos os botões e páginas do site
 (Hero, cabeçalho, rodapé, botão flutuante, FAQ etc.).
 
-### 2. Fotos reais
+### 2. Fotos
 
-As fotos ainda são placeholders (ícone de super-herói sobre fundo azul,
-com uma etiqueta indicando o nome do arquivo esperado). Para trocar:
+As fotos reais já estão em `public/images/` e em uso no site:
 
-1. Coloque os arquivos de imagem em `public/images/` seguindo os nomes
-   sugeridos em `public/images/README.txt`:
-   - `hero-principal.jpg` — foto grande da seção principal (Hero)
-   - `apresentacao.jpg` — foto da seção "Seu convidado mais especial chegou!"
-   - `galeria/galeria-01.jpg` até `galeria/galeria-06.jpg` (ou mais) — fotos da galeria
+- `hero-principal.jpg` — foto grande da seção principal (Hero)
+- `apresentacao.jpg` — foto da seção "Seu convidado mais especial chegou!"
+- `galeria/galeria-01.jpg`, `galeria-02.jpg`, `galeria-03.jpg` — fotos da galeria
 
-2. Troque o componente `<PlaceholderImage ... />` por uma tag `<img>`:
-   - Hero: [`src/components/Hero.jsx`](src/components/Hero.jsx)
-   - Apresentação: [`src/components/Apresentacao.jsx`](src/components/Apresentacao.jsx)
-   - Galeria: [`src/components/Galeria.jsx`](src/components/Galeria.jsx) (edite o array `FOTOS`
-     para adicionar/remover itens, e troque `<PlaceholderImage />` por `<img src={...} alt={...} />`)
-
-Exemplo de troca no Hero:
+Para trocar por outra foto, basta **substituir o arquivo mantendo o mesmo nome**.
+Para adicionar mais fotos à galeria, coloque o arquivo em `public/images/galeria/`
+e inclua um novo item no array `FOTOS` em [`src/components/Galeria.jsx`](src/components/Galeria.jsx):
 
 ```jsx
-// antes
-<PlaceholderImage icon="🦸‍♂️" filename="public/images/hero-principal.jpg" />
-
-// depois
-<img src="/images/hero-principal.jpg" alt="Super-herói na festa" />
+{ id: 4, filename: "galeria-04.jpg", alt: "Descreva a foto aqui", size: "normal" }
 ```
 
 ### 3. Textos das seções

@@ -26,7 +26,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span aria-hidden="true">📷</span> {siteConfig.instagramHandle}
+            <span aria-hidden="true">📷</span> Instagram
           </a>
         </div>
       </div>

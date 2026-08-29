@@ -1,4 +1,3 @@
-import PlaceholderImage from "./PlaceholderImage";
 import { Star } from "./ComicDecorations";
 import "./Apresentacao.css";
 
@@ -8,7 +7,11 @@ export default function Apresentacao() {
       <div className="container apresentacao__inner">
         <div className="apresentacao__figure">
           <div className="apresentacao__frame">
-            <PlaceholderImage icon="🦸‍♂️" filename="public/images/apresentacao.jpg" />
+            <img
+              src="/images/apresentacao.jpg"
+              alt="Super-herói posando com convidados em evento"
+              className="apresentacao__img"
+            />
           </div>
           <Star className="apresentacao__star" />
         </div>

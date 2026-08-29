@@ -1,5 +1,4 @@
 import WhatsappLink from "./WhatsappLink";
-import PlaceholderImage from "./PlaceholderImage";
 import { Lightning, Star, Burst } from "./ComicDecorations";
 import "./Hero.css";
 
@@ -41,7 +40,11 @@ export default function Hero() {
 
         <div className="hero__figure">
           <div className="hero__figure-frame">
-            <PlaceholderImage icon="🦸‍♂️" filename="public/images/hero-principal.jpg" />
+            <img
+              src="/images/hero-principal.jpg"
+              alt="Super-herói pronto para animar a festa"
+              className="hero__figure-img"
+            />
           </div>
           <Star className="hero__figure-star" />
         </div>

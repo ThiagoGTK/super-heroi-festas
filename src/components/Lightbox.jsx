@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef } from "react";
-import PlaceholderImage from "./PlaceholderImage";
 import "./Lightbox.css";
 
 export default function Lightbox({ items, activeIndex, onClose, onChangeIndex }) {
@@ -54,7 +53,7 @@ export default function Lightbox({ items, activeIndex, onClose, onChangeIndex })
         </button>
 
         <div className="lightbox__frame">
-          <PlaceholderImage icon="🦸" filename={`public/images/galeria/${item.filename}`} />
+          <img src={`/images/galeria/${item.filename}`} alt={item.alt} className="lightbox__img" />
         </div>
 
         <button

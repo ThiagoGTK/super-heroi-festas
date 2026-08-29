@@ -1,17 +1,13 @@
 import { useState } from "react";
-import PlaceholderImage from "./PlaceholderImage";
 import Lightbox from "./Lightbox";
 import "./Galeria.css";
 
-// Para trocar pelas fotos reais: adicione os arquivos em /public/images/galeria/
-// e substitua o <PlaceholderImage /> de cada item por <img src="/images/galeria/arquivo.jpg" alt="..." />
+// Para adicionar mais fotos: coloque o arquivo em /public/images/galeria/
+// e inclua um novo item no array abaixo.
 const FOTOS = [
-  { id: 1, filename: "galeria-01.jpg", alt: "Super-herói em festa infantil", size: "tall" },
-  { id: 2, filename: "galeria-02.jpg", alt: "Super-herói interagindo com crianças", size: "normal" },
-  { id: 3, filename: "galeria-03.jpg", alt: "Super-herói posando para foto", size: "normal" },
-  { id: 4, filename: "galeria-04.jpg", alt: "Super-herói animando a festa", size: "tall" },
-  { id: 5, filename: "galeria-05.jpg", alt: "Chegada do super-herói", size: "normal" },
-  { id: 6, filename: "galeria-06.jpg", alt: "Super-herói com as crianças no evento", size: "normal" },
+  { id: 1, filename: "galeria-01.jpg", alt: "Super-herói ao lado de criança em evento, fazendo joinha", size: "normal" },
+  { id: 2, filename: "galeria-02.jpg", alt: "Super-herói participando da festa e comemorando com bolo", size: "normal" },
+  { id: 3, filename: "galeria-03.jpg", alt: "Dupla de super-heróis em apresentação de evento à noite", size: "normal" },
 ];
 
 export default function Galeria() {
@@ -24,7 +20,7 @@ export default function Galeria() {
           <span className="section-eyebrow">Galeria</span>
           <h2 className="section-title">Momentos de aventura</h2>
           <p className="section-subtitle" style={{ textAlign: "center" }}>
-            Fotos ilustrativas — em breve, registros reais dos eventos.
+            Alguns registros reais de festas e eventos animados.
           </p>
         </div>
 
@@ -37,7 +33,12 @@ export default function Galeria() {
               onClick={() => setActiveIndex(index)}
               aria-label={`Ampliar foto: ${foto.alt}`}
             >
-              <PlaceholderImage icon="🦸" filename={`public/images/galeria/${foto.filename}`} />
+              <img
+                src={`/images/galeria/${foto.filename}`}
+                alt={foto.alt}
+                className="galeria__img"
+                loading="lazy"
+              />
               <span className="galeria__zoom" aria-hidden="true">
                 🔍
               </span>

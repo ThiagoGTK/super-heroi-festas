@@ -8,7 +8,7 @@ export const siteConfig = {
   heroName: "Herói das Festas",
 
   // Nome real do profissional (usado no rodapé, pode ser igual ao heroName)
-  professionalName: "[NOME DO PROFISSIONAL — preencher]",
+  professionalName: "Paulo Moreira",
 
   // Número de WhatsApp no formato internacional, SOMENTE NÚMEROS
   // Exemplo: 55 (Brasil) + DDD + número => "5511999999999"
@@ -19,11 +19,11 @@ export const siteConfig = {
     "Olá! Gostaria de saber mais sobre a presença do super-herói na minha festa e fazer um orçamento. 🦸🎉",
 
   // Link do Instagram (perfil completo)
-  instagramUrl: "https://instagram.com/SEU_INSTAGRAM_AQUI",
-  instagramHandle: "@seu_instagram_aqui",
+  instagramUrl: "https://www.instagram.com/hulkbc777/",
+  instagramHandle: "@hulkbc777",
 
-  // Região de atendimento (ainda não informada — editar quando definida)
-  serviceArea: "[REGIÃO DE ATENDIMENTO — a definir]",
+  // Região de atendimento
+  serviceArea: "Itajaí e região",
 };
 
 export default siteConfig;

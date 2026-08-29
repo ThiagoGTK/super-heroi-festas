@@ -27,12 +27,22 @@
 }
 
 .lightbox__frame {
-  width: 100%;
-  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 76vh;
   border-radius: 16px;
   border: 4px solid var(--color-white);
   box-shadow: var(--comic-shadow);
   overflow: hidden;
+  background: var(--color-navy-deep);
+}
+
+.lightbox__img {
+  display: block;
+  width: 100%;
+  max-height: 76vh;
+  object-fit: contain;
 }
 
 .lightbox__caption {

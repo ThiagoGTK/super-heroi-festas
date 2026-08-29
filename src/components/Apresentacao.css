@@ -24,6 +24,13 @@
   transform: rotate(1.5deg);
 }
 
+.apresentacao__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
 .apresentacao__star {
   position: absolute;
   width: 56px;
