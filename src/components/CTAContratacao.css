@@ -1,0 +1,41 @@
+.cta-contratacao {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-red), var(--color-red-dark));
+  text-align: center;
+}
+
+.cta-contratacao__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-contratacao__btn {
+  margin-top: 32px;
+  font-size: 1.1rem;
+}
+
+.cta-contratacao__deco {
+  position: absolute;
+  opacity: 0.85;
+}
+
+.cta-contratacao__deco--1 {
+  width: 50px;
+  top: 14%;
+  left: 8%;
+  transform: rotate(-10deg);
+}
+
+.cta-contratacao__deco--2 {
+  width: 44px;
+  bottom: 16%;
+  right: 10%;
+}
+
+@media (max-width: 640px) {
+  .cta-contratacao__deco {
+    display: none;
+  }
+}

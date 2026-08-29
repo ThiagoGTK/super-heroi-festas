@@ -1,0 +1,145 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 18px 0;
+  background: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+.site-header--scrolled {
+  background: var(--color-navy);
+  padding: 10px 0;
+  box-shadow: 0 4px 0 var(--color-ink);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--color-white);
+}
+
+.site-header__logo-icon {
+  color: var(--color-gold);
+  font-size: 1.6rem;
+}
+
+.site-header__nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.site-header__nav a {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.site-header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-gold);
+  transition: width 0.2s ease;
+}
+
+.site-header__nav a:hover::after {
+  width: 100%;
+}
+
+.site-header__cta {
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  box-shadow: var(--comic-shadow-sm);
+}
+
+.site-header__cta:hover {
+  box-shadow: 6px 6px 0 var(--color-ink);
+}
+
+.site-header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: var(--color-white);
+  border: 2px solid var(--color-ink);
+  border-radius: 8px;
+  padding: 0;
+  align-items: center;
+}
+
+.site-header__toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--color-ink);
+}
+
+.site-header__mobile-menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .site-header__nav,
+  .site-header__cta {
+    display: none;
+  }
+
+  .site-header__toggle {
+    display: flex;
+  }
+
+  .site-header__mobile-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color-navy);
+    transition: max-height 0.3s ease;
+  }
+
+  .site-header__mobile-menu.is-open {
+    max-height: 420px;
+    box-shadow: 0 6px 0 var(--color-ink);
+  }
+
+  .site-header__mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 24px 24px;
+  }
+
+  .site-header__mobile-menu a {
+    display: block;
+    color: var(--color-white);
+    font-weight: 600;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .site-header__mobile-menu .btn {
+    margin-top: 12px;
+    width: 100%;
+  }
+}
