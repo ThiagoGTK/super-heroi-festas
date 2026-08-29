@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Fotos reais (não versionadas — ficam só localmente)
-public/images/**/*.jpg
-public/images/**/*.jpeg
-public/images/**/*.png
-public/images/**/*.webp

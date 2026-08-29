@@ -1,5 +1,6 @@
 import WhatsappLink from "./WhatsappLink";
 import { Lightning, Star, Burst } from "./ComicDecorations";
+import { assetUrl } from "../utils/assetUrl";
 import "./Hero.css";
 
 export default function Hero() {
@@ -41,7 +42,7 @@ export default function Hero() {
         <div className="hero__figure">
           <div className="hero__figure-frame">
             <img
-              src="/images/hero-principal.jpg"
+              src={assetUrl("images/hero-principal.jpg")}
               alt="Super-herói pronto para animar a festa"
               className="hero__figure-img"
             />

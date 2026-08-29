@@ -1,4 +1,5 @@
 import { Star } from "./ComicDecorations";
+import { assetUrl } from "../utils/assetUrl";
 import "./Apresentacao.css";
 
 export default function Apresentacao() {
@@ -8,7 +9,7 @@ export default function Apresentacao() {
         <div className="apresentacao__figure">
           <div className="apresentacao__frame">
             <img
-              src="/images/apresentacao.jpg"
+              src={assetUrl("images/apresentacao.jpg")}
               alt="Super-herói posando com convidados em evento"
               className="apresentacao__img"
             />

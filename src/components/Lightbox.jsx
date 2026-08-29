@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef } from "react";
+import { assetUrl } from "../utils/assetUrl";
 import "./Lightbox.css";
 
 export default function Lightbox({ items, activeIndex, onClose, onChangeIndex }) {
@@ -53,7 +54,7 @@ export default function Lightbox({ items, activeIndex, onClose, onChangeIndex })
         </button>
 
         <div className="lightbox__frame">
-          <img src={`/images/galeria/${item.filename}`} alt={item.alt} className="lightbox__img" />
+          <img src={assetUrl(`images/galeria/${item.filename}`)} alt={item.alt} className="lightbox__img" />
         </div>
 
         <button

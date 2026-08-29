@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Lightbox from "./Lightbox";
+import { assetUrl } from "../utils/assetUrl";
 import "./Galeria.css";
 
 // Para adicionar mais fotos: coloque o arquivo em /public/images/galeria/
@@ -34,7 +35,7 @@ export default function Galeria() {
               aria-label={`Ampliar foto: ${foto.alt}`}
             >
               <img
-                src={`/images/galeria/${foto.filename}`}
+                src={assetUrl(`images/galeria/${foto.filename}`)}
                 alt={foto.alt}
                 className="galeria__img"
                 loading="lazy"
