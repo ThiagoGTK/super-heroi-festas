@@ -41,10 +41,15 @@ export default function Hero() {
 
         <div className="hero__figure">
           <div className="hero__figure-frame">
-            <img
-              src={assetUrl("images/hero-principal.jpg")}
-              alt="Super-herói pronto para animar a festa"
+            <video
+              src={assetUrl("images/galeria/galeria-video-01.mp4")}
               className="hero__figure-img"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Super-herói animando uma festa (vídeo em loop, sem som)"
             />
           </div>
           <Star className="hero__figure-star" />
