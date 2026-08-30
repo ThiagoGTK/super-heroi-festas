@@ -85,6 +85,27 @@
   transform: translateY(0);
 }
 
+/* Botão de play sempre visível, centralizado e maior, para deixar
+   claro que aquele item é um vídeo antes mesmo do hover. */
+.galeria__item--video .galeria__zoom {
+  top: 50%;
+  right: auto;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 1.5rem;
+  padding-left: 4px;
+  background: var(--color-red);
+  color: var(--color-white);
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.galeria__item--video:hover .galeria__zoom,
+.galeria__item--video:focus-visible .galeria__zoom {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
 @media (max-width: 900px) {
   .galeria__grid {
     grid-template-columns: repeat(2, 1fr);

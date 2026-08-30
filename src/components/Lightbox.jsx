@@ -35,7 +35,7 @@ export default function Lightbox({ items, activeIndex, onClose, onChangeIndex })
         className="lightbox__dialog"
         role="dialog"
         aria-modal="true"
-        aria-label={`Foto ampliada: ${item.alt}`}
+        aria-label={`${item.type === "video" ? "Vídeo" : "Foto ampliada"}: ${item.alt}`}
         tabIndex={-1}
         ref={dialogRef}
         onClick={(event) => event.stopPropagation()}
@@ -48,20 +48,31 @@ export default function Lightbox({ items, activeIndex, onClose, onChangeIndex })
           type="button"
           className="lightbox__nav lightbox__nav--prev"
           onClick={() => goTo(-1)}
-          aria-label="Foto anterior"
+          aria-label="Item anterior"
         >
           ‹
         </button>
 
         <div className="lightbox__frame">
-          <img src={assetUrl(`images/galeria/${item.filename}`)} alt={item.alt} className="lightbox__img" />
+          {item.type === "video" ? (
+            <video
+              key={item.id}
+              src={assetUrl(`images/galeria/${item.filename}`)}
+              className="lightbox__img"
+              controls
+              autoPlay
+              playsInline
+            />
+          ) : (
+            <img src={assetUrl(`images/galeria/${item.filename}`)} alt={item.alt} className="lightbox__img" />
+          )}
         </div>
 
         <button
           type="button"
           className="lightbox__nav lightbox__nav--next"
           onClick={() => goTo(1)}
-          aria-label="Próxima foto"
+          aria-label="Próximo item"
         >
           ›
         </button>
