@@ -23,9 +23,11 @@ export default function Apresentacao() {
             Um super-herói de verdade, na sua festa
           </h2>
           <p className="section-subtitle">
-            Imagine a reação das crianças quando um super-herói aparecer de verdade na festa.
-            O personagem chega caracterizado, interage com os convidados, participa dos momentos
-            especiais e leva muita diversão e energia para o evento.
+            Estamos à disposição para apresentar uma forma diferente de divulgar a sua marca:
+            nossos artistas dão vida a personagens super-heróis icônicos, queridos pelo público
+            de todas as idades, levando muito carisma para ações promocionais e eventos
+            corporativos. Consulte a disponibilidade e leve essa experiência única para a
+            divulgação dos seus produtos e serviços.
           </p>
         </div>
       </div>
