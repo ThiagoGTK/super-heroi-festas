@@ -5,7 +5,7 @@
 
 export const siteConfig = {
   // Nome do personagem / marca exibido no site
-  heroName: "Herói das Festas",
+  heroName: "Hulk BC Eventos",
 
   // Nome real do profissional (usado no rodapé, pode ser igual ao heroName)
   professionalName: "Paulo Moreira",
